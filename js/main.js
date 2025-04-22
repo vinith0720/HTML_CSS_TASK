@@ -11,11 +11,10 @@ function showToast(message, bgcolor = "linear-gradient(to right, #00b09b, #96c93
   }).showToast();
 }
 
-
-const form = document.getElementById('myForm');
-
-form.addEventListener('submit', e => {
-  e.preventDefault();          
-  showToast('Registered successfully');
-  setTimeout(() => form.submit(), 2000);
-});
+function handleSubmit(event) {
+  event.preventDefault(); // Stop default form behavior
+  showToast("Register successfully ")
+  setTimeout(() => {
+    window.location.href = "login.html"; 
+  }, 2000);
+}
