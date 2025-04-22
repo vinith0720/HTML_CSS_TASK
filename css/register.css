@@ -102,6 +102,25 @@ body {
     font-weight: bold;
     color: #444;
   }
+  .custom-toast {
+    font-size: 20px !important;   /* text size */
+    /* height: 30px !important;    */
+    width: 250px !important;      /* width */
+    padding: 16px 24px !important;
+    border-radius: 10px !important;
+    line-height: 28px !important;
+  
+  }
+  
+  .custom-toast .toast-close {
+    position: absolute;
+    top: 30%;
+    right: 12px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+  }
   
   @media (max-width: 600px) {
     form {

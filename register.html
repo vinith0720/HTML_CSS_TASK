@@ -3,34 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>REGISTER</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="./css/register.css">
 </head>
 
 <body>
 
-    
-    <form action="/login" method="post">
-      <h2>Register your Account</h2>
+  <form id="myForm" action="/login" method="POST">
+    <h2>Register your Account</h2>
 
     <!-- Text input for username -->
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" placeholder="Enter username" required />
-    <br><br>
+    <br>
 
     <!-- Password input -->
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" placeholder="Enter password" required />
-    <br><br>
+    <br>
 
     <!-- Email input -->
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" placeholder="Enter email" />
-    <br><br>
+    <br>
 
     <!-- Number input -->
     <label for="age">Age:</label>
     <input type="number" id="age" name="age" min="1" max="100" />
-    <br><br>
+    <br>
 
     <!-- Radio buttons (for gender) -->
     <p>Gender:</p>
@@ -43,55 +43,39 @@
     <label>
       <input type="radio" name="gender" value="other" /> Other
     </label>
-    <br><br>
-
-    <!-- Checkboxes (for hobbies) -->
-    <p>Select hobbies:</p>
-    <label>
-      <input type="checkbox" name="hobbies" value="reading" /> Reading
-    </label>
-    <label>
-      <input type="checkbox" name="hobbies" value="sports" /> Sports
-    </label>
-    <label>
-      <input type="checkbox" name="hobbies" value="music" /> Music
-    </label>
-    <br><br>
+    <br>
 
     <!-- File input -->
     <label for="profilePic">Upload Profile Picture:</label>
     <input type="file" id="profilePic" name="profilePic" />
-    <br><br>
-
-    <!-- Color picker -->
-    <label for="favColor">Pick your favorite color:</label>
-    <input type="color" id="favColor" name="favColor" />
-    <br><br>
+    <br>
 
     <!-- Date picker -->
     <label for="birthDate">Date of Birth:</label>
     <input type="date" id="birthDate" name="birthDate" />
-    <br><br>
+    <br>
 
     <!-- Telephone input -->
     <label for="phone">Phone:</label>
     <input type="tel" id="phone" name="phone" placeholder="123-456-7890" />
-    <br><br>
+    <br>
 
     <!-- URL input -->
     <label for="website">Website:</label>
     <input type="url" id="website" name="website" placeholder="https://example.com" />
-    <br><br>
+    <br>
 
     <!-- Hidden field (invisible to user, can carry metadata) -->
     <input type="hidden" name="formType" value="login" />
 
     <!-- Submit and Reset buttons -->
-    <input type="submit" value="Login" />
-    <input type="reset" value="Clear Form" />
+    <input type="submit" value="Register" />
+    <input type="reset" value="Clear Form"
+      onclick="showToast('Form cleared',bgcolor ='linear-gradient(to right, #ff9900,#ff66cc)')" />
     <br><br>
 
   </form>
-
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
